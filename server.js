@@ -51,6 +51,15 @@ app.get('/about', (req, res) => {
 });
 
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    welcomeMessage: 'Welcome to my Project page',
+    // currentYear: new Date().getFullYear() //we use helper insted
+  });
+});
+
+
 // /bad - send back json with errorMessage
 app.get('/bad', (req, res) => {
   res.send({
